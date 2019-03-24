@@ -8,7 +8,7 @@ sync_from_upstream () {
   git stash
   git remote add upstream  https://github.com/twlevelup/watch_edition_gitpod.git
   git fetch upstream master --depth=10
-  git merge upstream/master
+  git rebase upstream/master
   git stash pop
 }
 
