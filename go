@@ -4,6 +4,14 @@ command_exists () {
   type "$1" &> /dev/null ;
 }
 
+sync_from_upstream () {
+  git stash
+  git remote add upstream  https://github.com/twlevelup/watch_edition_gitpod.git
+  git fetch upstream master --depth=10
+  git merge upstream/master
+  git stash pop
+}
+
 show_instructions () {
   echo "Usage: ./go <command>"
   echo ""
@@ -45,6 +53,9 @@ if [[ $1 ]]; then
     exit $?
   elif [[ $1 == "start" ]]; then
     npm -s start
+  elif [[ $1 == "sync" ]]; then
+    sync_from_upstream
+    exit $?
   else
     echo "Unrecognised command: '$1'"
     show_instructions
