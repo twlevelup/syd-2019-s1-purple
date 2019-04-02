@@ -57,6 +57,10 @@ class HomePage extends BasePage {
   bottomButtonEvent() {
     this.watchFace.scrollTop += 40;
   }
+
+   faceButtonEvent() {
+    this.navigate('demo');
+  }
 }
 
 module.exports = HomePage;

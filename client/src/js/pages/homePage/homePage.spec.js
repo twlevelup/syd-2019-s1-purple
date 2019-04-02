@@ -34,6 +34,20 @@ describe('HomePage', () => {
   //   });
   // });
 
+describe('#faceButtonEvent', () => {
+  it('should take the user to the demo page', () => {
+    const props = {
+      navigate: () => { },
+    };
+
+    const page = new HomePage(props);
+    spyOn(page, 'navigate');
+
+    page.faceButtonEvent();
+    expect(page.navigate).toHaveBeenCalledWith('demo');
+  });
+});
+
   describe('#rightButtonEvent', () => {
     it('goes to contacts page', () => {
       const page = new HomePage();
@@ -43,6 +57,8 @@ describe('HomePage', () => {
       expect(page.navigate).toHaveBeenCalledWith('contacts');
     });
   });
+
+
 
   describe('#bottomButtonEvent', () => {
     it('scrolls page down', () => {
