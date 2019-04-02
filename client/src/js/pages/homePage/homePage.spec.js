@@ -102,3 +102,19 @@ describe('HomePage', () => {
     });
   });
 });
+
+describe('#leftButtonEvent', () => {
+  it('should take the user to the schedule page', () => {
+    const props = {
+      navigate: () => { },
+    };
+
+    const page = new HomePage(props);
+    spyOn(page, 'navigate');
+
+    page.leftButtonEvent();
+    expect(page.navigate).toHaveBeenCalledWith('schedulePage');
+  });
+});
+
+
