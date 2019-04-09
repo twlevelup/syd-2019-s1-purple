@@ -17,8 +17,8 @@ describe('The Schedule Page', () => {
       StorageHub.setData('schedule', schedule)
       const page = new SchedulePage();
       page.pageWillLoad();
-      expect(page.render()).toContain("<span>PE Class</span>");
-      expect(page.render()).toContain("<span>Gymnasium</span>");
+      expect(page.render()).toContain('<h1 class="right-now"> Right now </h1>');
+      expect(page.render()).toContain("<div>Gymnasium</div>");
       // expect(page.render().getElementsByTag("img").prop("src")).toEqual(logoImage)
     });
   });
