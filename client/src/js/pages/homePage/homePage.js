@@ -46,10 +46,8 @@ class HomePage extends BasePage {
   }
 
   leftButtonEvent() {
+
     this.navigate('schedulePage');
-
-    // AudioHub.playSound(plop);
-
   }
 
   topButtonEvent() {

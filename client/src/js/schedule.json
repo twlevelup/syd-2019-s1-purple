@@ -1,0 +1,13 @@
+[
+        {
+            "name": "PE Class",
+            "location": "Gymnasium",
+            "icon" : "schedule_ball.png"
+         },
+        {
+            "name": "Art Class",
+            "location": "12B",
+            "icon" : "art"
+        }
+]
+
