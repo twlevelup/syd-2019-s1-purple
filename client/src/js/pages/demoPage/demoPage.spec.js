@@ -1,4 +1,4 @@
-const DemoPage = require('../../src/js/pages/demoPage/demoPage');
+const DemoPage = require('./demoPage');
 
 describe('The Demo Page', () => {
   let watchFace;
@@ -8,7 +8,7 @@ describe('The Demo Page', () => {
   });
 
   describe('#render', () => {
-    it('should contain the correct text', () => {
+    it('should contain the correct text', () => {/////////dfdf
       const page = new DemoPage();
       expect(page.render()).toContain('This is a demo');
     });

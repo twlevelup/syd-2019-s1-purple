@@ -49,12 +49,12 @@ describe('#faceButtonEvent', () => {
 });
 
   describe('#rightButtonEvent', () => {
-    it('goes to contacts page', () => {
+    it('goes to moodTracking page', () => {
       const page = new HomePage();
       spyOn(page, 'navigate');
 
       page.rightButtonEvent();
-      expect(page.navigate).toHaveBeenCalledWith('contacts');
+      expect(page.navigate).toHaveBeenCalledWith('moodTracking');
     });
   });
 

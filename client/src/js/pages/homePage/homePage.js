@@ -42,7 +42,7 @@ class HomePage extends BasePage {
   }
 
   rightButtonEvent() {
-    this.navigate('contacts');
+    this.navigate('moodTracking');
   }
 
   leftButtonEvent() {

@@ -3,11 +3,17 @@ const ContactsPage = require('./pages/contactsPage/contactsPage');
 const TeamPage = require('./pages/teamPage/teamPage');
 const FourOhFour = require('./pages/404Page/404Page');
 const schedulePage = require('./pages/schedulePage/schedulePage');
+const DemoPage = require('./pages/demoPage/demoPage');
+const MoodTrackingPage = require('./pages/moodTrackingPage/moodTrackingPage');
+const HappyMoodPage = require('./pages/moodTrackingPage/happyMood');
 
 module.exports = {
- '/': HomePage,
- 'contacts': ContactsPage,
- 'team': TeamPage,
- '404': FourOhFour,
- 'schedulePage': schedulePage
+  '/': HomePage,
+  'contacts': ContactsPage,
+  'team': TeamPage,
+  '404': FourOhFour,
+  'demo': DemoPage,
+  'moodTracking': MoodTrackingPage,
+  'schedulePage': schedulePage,
+  'happyMood' : HappyMoodPage
 };
