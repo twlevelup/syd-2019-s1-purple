@@ -5,7 +5,7 @@ const FourOhFour = require('./pages/404Page/404Page');
 const schedulePage = require('./pages/schedulePage/schedulePage');
 const DemoPage = require('./pages/demoPage/demoPage');
 const MoodTrackingPage = require('./pages/moodTrackingPage/moodTrackingPage');
-const HappyMoodPage = require('./pages/moodTrackingPage/happyMood');
+const HappyMoodPage = require('./pages/moodTrackingPage/happyMoodPage');
 
 module.exports = {
   '/': HomePage,
@@ -15,5 +15,5 @@ module.exports = {
   'demo': DemoPage,
   'moodTracking': MoodTrackingPage,
   'schedulePage': schedulePage,
-  'happyMood' : HappyMoodPage
+  'happyMoodPage' : HappyMoodPage
 };

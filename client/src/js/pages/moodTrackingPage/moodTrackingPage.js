@@ -4,7 +4,7 @@ class MoodTrackingPage extends BasePage {
   template = require('./moodTrackingPage.hbs');
 
    rightButtonEvent() {
-    this.navigate('happyMood');
+    this.navigate('happyMoodPage');
   }
 }
 

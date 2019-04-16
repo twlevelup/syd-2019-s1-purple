@@ -8,7 +8,7 @@ describe('The Mood Tracking Page', () => {
   });
 
   describe('#render', () => {
-    it('should contain the correct text', () => {/////////dfdf
+    it('should contain the correct text', () => {
       const page = new MoodTrackingPage();
       expect(page.render()).toContain('How are you feeling today?');
     });
