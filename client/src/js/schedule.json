@@ -1,13 +1,18 @@
 [
         {
+            "time": "11 AM",
             "name": "PE Class",
             "location": "Gymnasium",
-            "icon" : "schedule_ball.png"
+            "icon" : "schedule_ball.png",
+            "home" : "home.png"
          },
+
         {
+            "time": "12 PM",
             "name": "Art Class",
             "location": "12B",
-            "icon" : "art"
+            "icon" : "schedule_art.png",
+            "home" : "home.png"
         }
 ]
 

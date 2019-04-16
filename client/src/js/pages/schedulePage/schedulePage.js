@@ -7,8 +7,16 @@ class schedulePage extends BasePage {
    pageWillLoad() {
     this.schedule = StorageHub.getData('schedule')[0];
     const icon = require(`../../../images/${this.schedule.icon}`)
+    const home = require(`../../../images/${this.schedule.home}`)
     this.icon = icon
+    this.home = home
+    console.log(this)
     }
+
+   leftButtonEvent() {
+
+    this.navigate('schedulePage1')
+  }
 
 }
 

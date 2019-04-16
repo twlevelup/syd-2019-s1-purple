@@ -3,6 +3,7 @@ const ContactsPage = require('./pages/contactsPage/contactsPage');
 const TeamPage = require('./pages/teamPage/teamPage');
 const FourOhFour = require('./pages/404Page/404Page');
 const schedulePage = require('./pages/schedulePage/schedulePage');
+const schedulePage1 = require('./pages/schedulePage/schedulePage');
 const DemoPage = require('./pages/demoPage/demoPage');
 const MoodTrackingPage = require('./pages/moodTrackingPage/moodTrackingPage');
 const HappyMoodPage = require('./pages/moodTrackingPage/happyMoodPage');
@@ -15,5 +16,6 @@ module.exports = {
   'demo': DemoPage,
   'moodTracking': MoodTrackingPage,
   'schedulePage': schedulePage,
-  'happyMoodPage' : HappyMoodPage
+  'happyMoodPage' : HappyMoodPage,
+  'schedulePage1': schedulePage1,
 };
