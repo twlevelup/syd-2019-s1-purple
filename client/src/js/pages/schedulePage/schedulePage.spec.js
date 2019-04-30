@@ -19,7 +19,6 @@ describe('The Schedule Page', () => {
       page.pageWillLoad();
       expect(page.render()).toContain('<h1 class="time"> 11 AM </h1>');
       expect(page.render()).toContain("Gymnasium");
-      // expect(page.render().getElementsByTag("img").prop("src")).toEqual(logoImage)
     });
   });
 });
