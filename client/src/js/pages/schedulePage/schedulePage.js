@@ -14,9 +14,16 @@ class schedulePage extends BasePage {
     }
 
    leftButtonEvent() {
-
     this.navigate('schedulePage1')
   }
+
+    rightButtonEvent(){
+      this.navigate('/')
+    }
+
+    bottomButtonEvent(){
+      this.navigate('/')
+    }
 
 }
 
