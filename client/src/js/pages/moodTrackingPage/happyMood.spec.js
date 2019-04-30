@@ -8,4 +8,15 @@ describe('The Happy Mood Page', () => {
       expect(page.render()).toContain('happyface');
     });
   });
+
+
+describe('#faceButtonEvent', () => {
+    it('goes to home page', () => {
+      const page = new HappyMoodPage();
+      spyOn(page, 'navigate');
+
+      page.faceButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('/');
+    });
+  });
 });
