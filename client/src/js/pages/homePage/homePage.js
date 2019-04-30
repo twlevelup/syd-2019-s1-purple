@@ -51,7 +51,7 @@ class HomePage extends BasePage {
   }
 
   topButtonEvent() {
-    this.watchFace.scrollTop -= 40;
+    this.navigate('sosPage');
   }
 
   bottomButtonEvent() {

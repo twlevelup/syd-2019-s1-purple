@@ -73,12 +73,11 @@ describe('#faceButtonEvent', () => {
   });
 
   describe('#topButtonEvent', () => {
-    it('scrolls page up', () => {
-      const page = new HomePage({ watchFace });
-
-      page.topButtonEvent();
-
-      expect(watchFace.scrollTop).toEqual(-40);
+    it('goes to sosPage', () => {
+     const page = new HomePage();
+    spyOn(page, 'navigate');
+    page.topButtonEvent();
+    expect(page.navigate).toHaveBeenCalledWith('sosPage');
     });
   });
 

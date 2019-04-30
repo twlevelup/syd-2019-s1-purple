@@ -7,7 +7,7 @@ const schedulePage1 = require('./pages/schedulePage/schedulePage1');
 const DemoPage = require('./pages/demoPage/demoPage');
 const MoodTrackingPage = require('./pages/moodTrackingPage/moodTrackingPage');
 const HappyMoodPage = require('./pages/moodTrackingPage/happyMoodPage');
-
+const SosPage = require('./pages/sosPage/sosPage');
 module.exports = {
   '/': HomePage,
   'contacts': ContactsPage,
@@ -18,4 +18,5 @@ module.exports = {
   'schedulePage': schedulePage,
   'happyMoodPage' : HappyMoodPage,
   'schedulePage1': schedulePage1,
+  'sosPage': SosPage,
 };
