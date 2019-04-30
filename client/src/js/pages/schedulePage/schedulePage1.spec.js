@@ -12,14 +12,14 @@ describe('The Schedule1 Page', () => {
   describe('#render', () => {
     it('should render activity for right now', () => {
       const schedule = [
+        { time:'11 AM', name: 'PE Class', location: 'Gymnasium', icon: 'schedule_ball.png', home: 'home.png' },
         { time: '12 PM', name: 'Art Class', location: '12B', icon: 'schedule_art.png', home: 'home.png' },
       ];
       StorageHub.setData('schedule', schedule)
       const page = new SchedulePage();
       page.pageWillLoad();
-      // expect(page.render()).toContain('<h1 class="time"> 12 PM </h1>');
-      // expect(page.render()).toContain("12B");
-      // expect(page.render().getElementsByTag("img").prop("src")).toEqual(logoImage)
+      expect(page.render()).toContain('<h1 class="time"> 12 PM </h1>');
+      expect(page.render()).toContain("12B");
     });
   });
 });
