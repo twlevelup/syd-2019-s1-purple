@@ -12,5 +12,6 @@ describe('The Sos Page', () => {
       const page = new SosPage();
       expect(page.render()).toContain('Location sent to Mom');
     });
+
   });
 });

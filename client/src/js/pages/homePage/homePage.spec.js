@@ -79,6 +79,7 @@ describe('#faceButtonEvent', () => {
     page.topButtonEvent();
     expect(page.navigate).toHaveBeenCalledWith('sosPage');
     });
+
   });
 
   describe('#updateTimeDisplay', () => {
