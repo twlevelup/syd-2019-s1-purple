@@ -5,5 +5,18 @@
 
 .mood-page-text {
     font-weight: bold;
-    font-size: 40px;
+    font-size: 20px;
+    margin: 0;
+}
+.container {
+    display: flex;
+    margin-top: 42%;
+}
+.container div {
+    padding: 0 20px;
+    margin-top: -30px;
+}
+img.nav{
+    width: 20%;
+    height: 20%;
 }
