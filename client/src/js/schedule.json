@@ -3,21 +3,14 @@
             "time": "11 AM",
             "name": "PE Class",
             "location": "Gymnasium",
-            "icon" : "schedule_ball.png",
-            "home" : "home.png"
+            "icon" : "schedule_ball.png"
          },
 
         {
             "time": "12 PM",
             "name": "Art Class",
             "location": "12B",
-            "icon" : "schedule_art.png",
-            "home" : "home.png"
-        },
-
-        {
-            "left" : "left.png",
-            "right" : "right.png"
+            "icon" : "schedule_art.png"
         }
 ]
 

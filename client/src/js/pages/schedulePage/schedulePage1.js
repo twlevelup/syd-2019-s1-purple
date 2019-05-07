@@ -6,11 +6,10 @@ class schedulePage1 extends BasePage {
 
    pageWillLoad() {
     this.schedule = StorageHub.getData('schedule')[1];
-    this.nav = StorageHub.getData('schedule')[2];
-    const icon = require(`../../../images/schedule_art.png`)
+    const icon = require(`../../../images/${this.schedule.icon}`)
     const home = require(`../../../images/home.png`)
-    const left = require(`../../../images/${this.nav.left}`)
-    const right = require(`../../../images/${this.nav.right}`)
+    const left = require(`../../../images/left.png`)
+    const right = require(`../../../images/right.png`)
     this.icon = icon
     this.home = home
     this.left = left
