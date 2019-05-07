@@ -1,0 +1,15 @@
+#sosPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 240px;
+    width: 100%;
+    color: black;
+    font-size: 32px;
+    font-weight: bold;
+}
+img {
+        padding-bottom: 8px;
+    }

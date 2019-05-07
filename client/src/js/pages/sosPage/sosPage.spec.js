@@ -10,8 +10,25 @@ describe('The Sos Page', () => {
   describe('#render', () => {
     it('should contain the correct text', () => {
       const page = new SosPage();
-      expect(page.render()).toContain('Location sent to Mom');
+      expect(page.render()).toContain(`<div>
+    <p>Location</p>
+    <p>sent to mum</p>
+</div>`);
     });
+
+    describe('#bottomButtonEvent', () => {
+  it('should take the user to the home page', () => {
+    const props = {
+      navigate: () => { },
+    };
+
+    const page = new SosPage(props);
+    spyOn(page, 'navigate');
+
+    page.bottomButtonEvent();
+    expect(page.navigate).toHaveBeenCalledWith('/');
+  });
+});
 
   });
 });

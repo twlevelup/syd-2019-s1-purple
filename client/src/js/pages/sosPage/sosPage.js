@@ -10,9 +10,9 @@ navigator.geolocation.getCurrentPosition(location => {
     }
   );
 }
-  //  faceButtonEvent() {
-  //   this.navigate('/');
-  // }
+    bottomButtonEvent() {
+    this.navigate('/');
+  }
 }
 // const happyEmoji = 'happyface.png';
 module.exports = SosPage;
