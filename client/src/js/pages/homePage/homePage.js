@@ -3,11 +3,15 @@ const StorageHub = require('watch-framework').StorageHub;
 const AudioHub = require('watch-framework').AudioHub;
 const logo = require('../../../images/logo.png');
 const plop = './sounds/plop.mp3';
-
+var set = false;
+var milliseconds = today + 38940000 + (Date.now() - start);
+var start = new Date();
+var today = new Date();
+today.setHours(0,0,0,0);
+var fakeTime = new Date();
 //test for raspberrypi
 class HomePage extends BasePage {
   template = require('./homePage.hbs');
-
   pageWillLoad() {
     StorageHub.setData('contacts', [
       { name: 'Ray', phoneNumber: '0431 111 111' },
@@ -18,15 +22,18 @@ class HomePage extends BasePage {
     this.updateTimeEverySecond();
     const dateTime = this.getDateTime();
     this.date = dateTime.date;
-    this.time = dateTime.time;
+    this.time = dateTime.time + (24 - dateTime.date + '10:49:00');
     this.logo = logo;
   }
 
   getDateTime() {
-    const dateTime = new Date(Date.now()).toLocaleString('en-AU').split(",");
+    // 38940000 = 10:49:00
+    // 1557535740000 = 11 May 2019 10:49:00
+    milliseconds = today.getTime() + 38940000 + (Date.now() - start);
+    fakeTime =  new Date(milliseconds).toLocaleString('en-AU').split(",");
     return {
-      date: dateTime[0],
-      time: dateTime[1],
+      date: fakeTime[0],
+      time: fakeTime[1]
     };
   }
 
