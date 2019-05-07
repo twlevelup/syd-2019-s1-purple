@@ -13,4 +13,18 @@ describe('The Mood Tracking Page', () => {
       expect(page.render()).toContain('How are you feeling today?');
     });
   });
+  describe('#leftButtonEvent', () => {
+  it('should take user back a page', () => {
+    const props = {
+      navigate: () => { },
+    };
+
+    const page = new MoodTrackingPage(props);
+    spyOn(page, 'navigate');
+
+    page.leftButtonEvent();
+    expect(page.navigate).toHaveBeenCalledWith('/');
+  });
+});
+
 });

@@ -9,6 +9,10 @@ class HappyMoodPage extends BasePage {
    rightButtonEvent() {
      this.navigate('sadMoodPage');
   }
+
+  leftButtonEvent() {
+     this.navigate('moodTracking');
+  }
 }
 // const happyEmoji = 'happyface.png';
 module.exports = HappyMoodPage;

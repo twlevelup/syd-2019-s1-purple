@@ -19,4 +19,17 @@ describe('#faceButtonEvent', () => {
       expect(page.navigate).toHaveBeenCalledWith('/');
     });
   });
+  describe('#leftButtonEvent', () => {
+  it('should take user back a page', () => {
+    const props = {
+      navigate: () => { },
+    };
+
+    const page = new HappyMoodPage(props);
+    spyOn(page, 'navigate');
+
+    page.leftButtonEvent();
+    expect(page.navigate).toHaveBeenCalledWith('moodTracking');
+  });
+});
 });

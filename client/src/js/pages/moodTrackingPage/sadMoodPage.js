@@ -6,7 +6,11 @@ class SadMoodPage extends BasePage {
      alert("SAD FACE")
      this.navigate('/');
   }
- 
+
+   leftButtonEvent() {
+     this.navigate('happyMoodPage');
+  }
+
 }
 // const happyEmoji = 'happyface.png';
 module.exports = SadMoodPage;

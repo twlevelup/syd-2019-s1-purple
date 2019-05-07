@@ -4,7 +4,6 @@ const TeamPage = require('./pages/teamPage/teamPage');
 const FourOhFour = require('./pages/404Page/404Page');
 const schedulePage = require('./pages/schedulePage/schedulePage');
 const schedulePage1 = require('./pages/schedulePage/schedulePage1');
-const DemoPage = require('./pages/demoPage/demoPage');
 const MoodTrackingPage = require('./pages/moodTrackingPage/moodTrackingPage');
 const HappyMoodPage = require('./pages/moodTrackingPage/happyMoodPage');
 const SadMoodPage = require('./pages/moodTrackingPage/sadMoodPage');
@@ -14,7 +13,6 @@ module.exports = {
   'contacts': ContactsPage,
   'team': TeamPage,
   '404': FourOhFour,
-  'demo': DemoPage,
   'moodTracking': MoodTrackingPage,
   'schedulePage': schedulePage,
   'happyMoodPage' : HappyMoodPage,
