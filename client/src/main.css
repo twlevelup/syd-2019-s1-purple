@@ -1,5 +1,5 @@
 @import './styles/pages/home.css';
 @import './styles/pages/schedule.scss';
+@import './styles/pages/sosPage.scss';
+@import './styles/pages/moodPage.scss';
 @import 'map.css';
-@import './styles/pages/sosPage.scss'
-

@@ -5,8 +5,7 @@ class SosPage extends BasePage {
 pageWillLoad() {
 navigator.geolocation.getCurrentPosition(location => {
   //TODO Write test
-  console.log('Latitude: ', location.coords.latitude)
-  console.log('Longitude: ', location.coords.longitude)
+  alert(`Latitude: ${location.coords.latitude}\nLongitude: ${location.coords.longitude}`)
     }
   );
 }

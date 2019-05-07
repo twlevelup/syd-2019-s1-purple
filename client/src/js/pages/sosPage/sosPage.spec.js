@@ -10,10 +10,8 @@ describe('The Sos Page', () => {
   describe('#render', () => {
     it('should contain the correct text', () => {
       const page = new SosPage();
-      expect(page.render()).toContain(`<div>
-    <p>Location</p>
-    <p>sent to mum</p>
-</div>`);
+      expect(page.render()).toContain(
+        `<p>Location</p><p>sent to mum</p>`);
     });
 
     describe('#bottomButtonEvent', () => {
