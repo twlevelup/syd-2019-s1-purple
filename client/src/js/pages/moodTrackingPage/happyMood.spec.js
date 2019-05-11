@@ -4,19 +4,19 @@ describe('The Happy Mood Page', () => {
 
   describe('#render', () => {
 
-    it('should show images', () => {
+    it('should show main class image', () => {
        const page = new HappyMoodPage();
        page.pageWillLoad();
       expect(page.render()).toContain('<img src="test-file-stub" class="main"/>');
     });
 
-    it('should show images', () => {
+    it('should show nav class image', () => {
        const page = new HappyMoodPage();
        page.pageWillLoad();
       expect(page.render()).toContain('<img src="test-file-stub" class="nav"/>');
     });
 
-    it('should show images', () => {
+    it('should show home class image', () => {
        const page = new HappyMoodPage();
        page.pageWillLoad();
       expect(page.render()).toContain('<img src="test-file-stub" class="home"/>');
