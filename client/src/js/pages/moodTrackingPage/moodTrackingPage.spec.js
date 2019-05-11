@@ -10,7 +10,7 @@ describe('The Mood Tracking Page', () => {
   describe('#render', () => {
     it('should contain the correct text', () => {
       const page = new MoodTrackingPage();
-      expect(page.render()).toContain('How are you feeling today?');
+      expect(page.render()).toMatch(/How are/);
     });
   });
   describe('#leftButtonEvent', () => {

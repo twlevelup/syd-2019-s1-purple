@@ -3,13 +3,26 @@ const HappyMoodPage = require('./happyMoodPage');
 describe('The Happy Mood Page', () => {
 
   describe('#render', () => {
-    it('should contain the correct text', () => {
-      const page = new HappyMoodPage();
-      expect(page.render()).toContain('happyface');
+
+    it('should show main class image', () => {
+       const page = new HappyMoodPage();
+       page.pageWillLoad();
+      expect(page.render()).toContain('<img src="test-file-stub" class="main"/>');
     });
+
+    it('should show nav class image', () => {
+       const page = new HappyMoodPage();
+       page.pageWillLoad();
+      expect(page.render()).toContain('<img src="test-file-stub" class="nav"/>');
+    });
+
+    it('should show home class image', () => {
+       const page = new HappyMoodPage();
+       page.pageWillLoad();
+      expect(page.render()).toContain('<img src="test-file-stub" class="home"/>');
+    });
+
   });
-
-
 describe('#faceButtonEvent', () => {
     it('goes to home page', () => {
       const page = new HappyMoodPage();
