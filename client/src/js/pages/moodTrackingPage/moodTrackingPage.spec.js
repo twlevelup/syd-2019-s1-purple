@@ -13,18 +13,29 @@ describe('The Mood Tracking Page', () => {
       expect(page.render()).toMatch(/How are/);
     });
   });
+
   describe('#leftButtonEvent', () => {
-  it('should take user back a page', () => {
-    const props = {
-      navigate: () => { },
-    };
+    it('should take user back a page', () => {
+      const props = {
+        navigate: () => { },
+      };
 
-    const page = new MoodTrackingPage(props);
-    spyOn(page, 'navigate');
+      const page = new MoodTrackingPage(props);
+      spyOn(page, 'navigate');
 
-    page.leftButtonEvent();
-    expect(page.navigate).toHaveBeenCalledWith('/');
+      page.leftButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('/');
+    });
   });
+
+  describe('#bottomButtonEvent', () => {
+    it('should take user to home page', () => {
+      const page = new MoodTrackingPage();
+      spyOn(page, 'navigate');
+
+      page.bottomButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('/')
+    })
+  })
 });
 
-});

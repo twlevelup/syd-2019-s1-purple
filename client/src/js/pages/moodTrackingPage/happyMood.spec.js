@@ -44,5 +44,15 @@ describe('#faceButtonEvent', () => {
     page.leftButtonEvent();
     expect(page.navigate).toHaveBeenCalledWith('moodTracking');
   });
+
+  describe('#bottomButtonEvent', () => {
+    it('should take user to home page', () => {
+      const page = new HappyMoodPage();
+      spyOn(page, 'navigate');
+
+      page.bottomButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('/')
+    })
+  })
 });
 });

@@ -14,6 +14,10 @@ class HappyMoodPage extends BasePage {
      this.navigate('moodTracking');
   }
 
+  bottomButtonEvent(){
+      this.navigate('/')
+    }
+
    pageWillLoad() {
     const happyface = require(`../../../images/happy_face.png`);
     const home = require(`../../../images/home.png`);

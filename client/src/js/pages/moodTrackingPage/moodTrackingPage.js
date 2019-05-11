@@ -21,6 +21,10 @@ class MoodTrackingPage extends BasePage {
   leftButtonEvent() {
      this.navigate('/');
   }
+
+   bottomButtonEvent(){
+      this.navigate('/')
+    }
 }
 
 module.exports = MoodTrackingPage;

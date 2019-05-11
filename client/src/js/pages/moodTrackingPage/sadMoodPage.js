@@ -11,6 +11,10 @@ class SadMoodPage extends BasePage {
      this.navigate('happyMoodPage');
   }
 
+  bottomButtonEvent(){
+      this.navigate('/')
+    }
+
   pageWillLoad() {
     const sadface = require(`../../../images/sad_face.png`);
     const home = require(`../../../images/home.png`);

@@ -7,7 +7,7 @@ describe('The Sad Mood Page', () => {
     it('should show main class image', () => {
        const page = new SadMoodPage();
        page.pageWillLoad();
-      expect(page.render()).toContain('<img src="test-file-stub" class="main"/>');
+      expect(page.render()).toContain('<img src="test-file-stub" class="pull-left"/>');
     });
 
     it('should show nav class images', () => {
@@ -47,4 +47,15 @@ describe('The Sad Mood Page', () => {
       expect(page.navigate).toHaveBeenCalledWith('happyMoodPage');
     });
   });
+
+  describe('#bottomButtonEvent', () => {
+    it('should take user to home page', () => {
+      const page = new SadMoodPage();
+      spyOn(page, 'navigate');
+
+      page.bottomButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('/')
+    })
+  })
+
 });
