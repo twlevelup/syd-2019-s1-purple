@@ -16,11 +16,7 @@ describe('The Mood Tracking Page', () => {
 
   describe('#leftButtonEvent', () => {
     it('should take user back a page', () => {
-      const props = {
-        navigate: () => { },
-      };
-
-      const page = new MoodTrackingPage(props);
+      const page = new MoodTrackingPage();
       spyOn(page, 'navigate');
 
       page.leftButtonEvent();

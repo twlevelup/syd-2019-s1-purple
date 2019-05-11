@@ -15,7 +15,6 @@ class schedulePage extends BasePage {
     this.home = home
     this.left = left
     this.right = right
-    console.log(this)
     }
 
    leftButtonEvent() {

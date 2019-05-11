@@ -116,7 +116,7 @@ module.exports = class App {
     )
     this.watchClick$.subscribe((...args) => {this.testClick(...args)});
   }
-  
+
   handleEvent({ target, timeTaken }) {
     let eventName = `${target}ButtonEvent`;
     let eventHandlerParams;

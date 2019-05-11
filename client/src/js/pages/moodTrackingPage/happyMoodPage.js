@@ -24,6 +24,8 @@ class HappyMoodPage extends BasePage {
     const left = require(`../../../images/left.png`);
     const right = require(`../../../images/right.png`);
 
+    window.localStorage.setItem('previouspage', 'happy');
+
 
     this.happyface = happyface;
     this.home = home;

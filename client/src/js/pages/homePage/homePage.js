@@ -31,6 +31,7 @@ class HomePage extends BasePage {
       { name: 'Jafari', phoneNumber: '0431 333 333' },
     ])
 
+    const prevPage = window.localStorage.getItem('previouspage');
     this.updateTimeEverySecond();
 
     const dateTime = this.getDateTime();
@@ -40,7 +41,14 @@ class HomePage extends BasePage {
     this.logo = logo;
     this.smiley = smiley;
     this.scheduleCalendar = scheduleCalendar;
-    this.sos = sos
+    this.sos = sos;
+    window.localStorage.clear();
+    if (prevPage === 'happy') {
+      this.backgroundClass = 'green-text'
+    } else if (prevPage === 'sad') {
+      this.backgroundClass = 'red-text'
+    }
+
   }
 
   getDateTime = () => {
