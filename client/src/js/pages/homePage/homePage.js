@@ -3,6 +3,9 @@ const StorageHub = require('watch-framework').StorageHub;
 const AudioHub = require('watch-framework').AudioHub;
 const logo = require('../../../images/logo.png');
 const plop = './sounds/plop.mp3';
+const smiley = require('./../../../images/smiley.png')
+const sos = require('./../../../images/sos.png')
+const scheduleCalendar = require('./../../../images/schedule_calendar.png')
 var set = false;
 var milliseconds = today + 38940000 + (Date.now() - start);
 var start = new Date();
@@ -24,6 +27,9 @@ class HomePage extends BasePage {
     this.date = dateTime.date;
     this.time = dateTime.time + (24 - dateTime.date + '10:49:00');
     this.logo = logo;
+    this.smiley = smiley;
+    this.scheduleCalendar = scheduleCalendar;
+    this.sos = sos
   }
 
   getDateTime() {
@@ -44,7 +50,8 @@ class HomePage extends BasePage {
   updateTimeDisplay(getTime) {
     const clockTime = document.getElementById("clock-time");
     if (clockTime) {
-      clockTime.textContent = getTime().time;
+    const {time} = getTime()
+      clockTime.textContent = time.split(':')[0] + ':' + time.split(':')[1] + ' ' + time.split(' ')[2];
     }
   }
 
@@ -65,9 +72,6 @@ class HomePage extends BasePage {
     this.watchFace.scrollTop += 40;
   }
 
-   faceButtonEvent() {
-    this.navigate('demo');
-  }
 }
 
 module.exports = HomePage;

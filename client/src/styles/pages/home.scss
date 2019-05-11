@@ -1,0 +1,28 @@
+#home {
+  display: flex;
+  flex-direction:  column;
+  justify-content: space-around;
+  align-items: center;
+  height: 240px;
+  margin-right: 16px;
+}
+
+.screen{
+  background-color: white;
+  color:black !important
+}
+
+.image-container {
+        width: 100%;
+        display:flex;
+        justify-content: space-between;
+        margin: 0 0 16px 0;
+    }
+.nav-home {
+    width: 48px;
+    height: 48px;
+}
+
+#clock-time {
+    font-size: 24px;
+}
