@@ -15,6 +15,7 @@
 .image-container {
         width: 100%;
         display:flex;
+        flex-direction: row-reverse;
         justify-content: space-between;
         margin: 0 0 16px 0;
     }
@@ -24,5 +25,6 @@
 }
 
 #clock-time {
-    font-size: 24px;
+    font-size: 32px;
+    font-weight: bold;
 }

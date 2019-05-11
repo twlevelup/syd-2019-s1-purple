@@ -18,13 +18,6 @@ describe('HomePage', () => {
     })
   })
 
-  describe('#render', () => {
-    it('should render my page correctly', () => {
-      const page = new HomePage();
-      expect(page.render()).toContain("<div>Hello, World!</div>");
-    });
-  });
-
   describe('#rightButtonEvent', () => {
     it('goes to moodTracking page', () => {
       const page = new HomePage();
