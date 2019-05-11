@@ -28,6 +28,16 @@ describe('The Mood Tracking Page', () => {
     });
   });
 
+  describe('rightButtonEvent', () => {
+    it('should take user to happy face page', () => {
+      const page = new MoodTrackingPage();
+      spyOn(page, 'navigate');
+
+      page.rightButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('happyMoodPage');
+    });
+ });
+
   describe('#bottomButtonEvent', () => {
     it('should take user to home page', () => {
       const page = new MoodTrackingPage();
