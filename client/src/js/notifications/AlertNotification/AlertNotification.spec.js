@@ -6,7 +6,7 @@ describe("AlertNotification", () => {
   describe("#render", () => {
     it("should render my page correctly", () => {
       const notification = new AlertNotification();
-      expect(notification.render()).toContain("Alert");
+      expect(notification.render()).toContain("Your next activity:");
     });
   });
 
