@@ -1,6 +1,8 @@
 const HomePage = require('./homePage');
 const StorageHub = require('watch-framework').StorageHub;
 const AudioHub = require('watch-framework').AudioHub;
+const NotificationHub = require('watch-framework').NotificationHub;
+const AlertNotification = require("../../notifications/AlertNotification/AlertNotification");
 
 describe('HomePage', () => {
   let watchFace;
@@ -16,7 +18,25 @@ describe('HomePage', () => {
       page.pageWillLoad();
       expect(StorageHub.setData).toBeCalledWith('contacts', expect.any(Array));
     })
-  })
+
+    it('should not show schedule notification when the time is before 10:50', () => {
+      Date.now = jest.fn(() => 0)
+      spyOn(Date.prototype, 'getTime').and.returnValue(0);
+      spyOn(NotificationHub, 'show');
+      const page = new HomePage();
+      page.pageWillLoad();
+      expect(NotificationHub.show).not.toBeCalled();
+    });
+  });
+
+  describe('showNotification', () => {
+    it('showNotification should show notification when the argument is larger than 10:50', () => {
+      spyOn(NotificationHub, 'show');
+      const page = new HomePage();
+      page.showNotification(1557571800001);
+      expect(NotificationHub.show).toBeCalledWith('schedule', "");
+    });
+  });
 
   describe('#rightButtonEvent', () => {
     it('goes to moodTracking page', () => {
@@ -30,17 +50,17 @@ describe('HomePage', () => {
 
 
 
-  describe('#bottomButtonEvent', () => {
-    it('scrolls page down', () => {
+  // describe('#bottomButtonEvent', () => {
+  //   it('scrolls page down', () => {
 
-      const page = new HomePage({ watchFace });
+  //     const page = new HomePage({ watchFace });
 
-      page.bottomButtonEvent();
+  //     page.bottomButtonEvent();
 
-      expect(watchFace.scrollTop).toEqual(40);
+  //     expect(watchFace.scrollTop).toEqual(40);
 
-    });
-  });
+  //   });
+  // });
 
   describe('#topButtonEvent', () => {
     it('goes to sosPage', () => {
@@ -102,5 +122,3 @@ describe('#leftButtonEvent', () => {
     expect(page.navigate).toHaveBeenCalledWith('schedulePage');
   });
 });
-
-

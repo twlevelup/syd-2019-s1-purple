@@ -1,18 +1,27 @@
 const BasePage = require('watch-framework').BasePage;
 const StorageHub = require('watch-framework').StorageHub;
 const AudioHub = require('watch-framework').AudioHub;
+const AlertNotification = require('../../notifications/AlertNotification/AlertNotification');
+const NotificationHub = require('watch-framework').NotificationHub;
+const BaseNotification = require('watch-framework').BaseNotification;
+
 const logo = require('../../../images/logo.png');
 const plop = './sounds/plop.mp3';
-const smiley = require('./../../../images/smiley.png')
-const sos = require('./../../../images/sos.png')
-const scheduleCalendar = require('./../../../images/schedule_calendar.png')
+const smiley = require('./../../../images/smiley.png');
+const sos = require('./../../../images/sos.png');
+const scheduleCalendar = require('./../../../images/schedule_calendar.png');
+
+
 var set = false;
 var milliseconds = today + 38940000 + (Date.now() - start);
 var start = new Date();
 var today = new Date();
 today.setHours(0,0,0,0);
+var shown = false;
 var fakeTime = new Date();
-//test for raspberrypi
+
+
+
 class HomePage extends BasePage {
   template = require('./homePage.hbs');
   pageWillLoad() {
@@ -23,24 +32,34 @@ class HomePage extends BasePage {
     ])
 
     this.updateTimeEverySecond();
+
     const dateTime = this.getDateTime();
     this.date = dateTime.date;
-    this.time = dateTime.time + (24 - dateTime.date + '10:49:00');
+    this.time = dateTime.time.split(':')[0] + ':' + dateTime.time.split(':')[1] + ' ' + dateTime.time.split(' ')[2];
+
     this.logo = logo;
     this.smiley = smiley;
     this.scheduleCalendar = scheduleCalendar;
     this.sos = sos
   }
 
-  getDateTime() {
-    // 38940000 = 10:49:00
-    // 1557535740000 = 11 May 2019 10:49:00
-    milliseconds = today.getTime() + 38940000 + (Date.now() - start);
-    fakeTime =  new Date(milliseconds).toLocaleString('en-AU').split(",");
+  getDateTime = () => {
+    milliseconds = today.getTime() + 38990000 + (Date.now() - start);
+    this.showNotification(milliseconds);
+
+    fakeTime = new Date(milliseconds).toLocaleString('en-AU').split(",");
+    console.log(fakeTime[1]);
     return {
       date: fakeTime[0],
       time: fakeTime[1]
     };
+  }
+
+  showNotification(input) {
+    if(input >= today.getTime() + 39000000 && !shown) {
+      NotificationHub.show('schedule', "");
+      shown = true;
+    }
   }
 
   updateTimeEverySecond() {
@@ -50,7 +69,7 @@ class HomePage extends BasePage {
   updateTimeDisplay(getTime) {
     const clockTime = document.getElementById("clock-time");
     if (clockTime) {
-    const {time} = getTime()
+      const {time} = getTime()
       clockTime.textContent = time.split(':')[0] + ':' + time.split(':')[1] + ' ' + time.split(' ')[2];
     }
   }
@@ -60,7 +79,6 @@ class HomePage extends BasePage {
   }
 
   leftButtonEvent() {
-
     this.navigate('schedulePage');
   }
 
@@ -69,7 +87,8 @@ class HomePage extends BasePage {
   }
 
   bottomButtonEvent() {
-    this.watchFace.scrollTop += 40;
+    // this.watchFace.scrollTop += 40;
+    NotificationHub.show();
   }
 
 }

@@ -11,6 +11,12 @@ const notifications = [
     type: "base",
     label: "Base",
     defaultValue: "This is a test base notification",
+  },
+  {
+    type: "schedule",
+    label: "Schedule Alert",
+    defaultValue: "Your next activity is PE Class at 11AM.",
+    view: AlertNotification,
   }
 ];
 
