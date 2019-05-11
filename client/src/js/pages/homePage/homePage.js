@@ -86,11 +86,6 @@ class HomePage extends BasePage {
     this.navigate('sosPage');
   }
 
-  bottomButtonEvent() {
-    // this.watchFace.scrollTop += 40;
-    NotificationHub.show();
-  }
-
 }
 
 module.exports = HomePage;
