@@ -1,5 +1,7 @@
 const SadMoodPage = require('./sadMoodPage');
 
+window.alert = jest.fn();
+
 describe('The Sad Mood Page', () => {
 
   describe('#render', () => {

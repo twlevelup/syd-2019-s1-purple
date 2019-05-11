@@ -11,6 +11,7 @@
 .container {
     display: flex;
     margin-top: 42%;
+    margin-right: 16px;
 }
 .container div {
     padding: 0 20px;
@@ -23,10 +24,11 @@ img.nav{
 .middle{
     padding-top:70px;
     padding-bottom:35px;
+    padding-right: 16px;
 }
 
 .homepadding{
-    margin-top: 10px;
+    margin: 10px 16px 0 0;
 
 }
 

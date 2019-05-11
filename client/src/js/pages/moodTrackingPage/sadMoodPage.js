@@ -3,7 +3,7 @@ const BasePage = require('watch-framework').BasePage;
 class SadMoodPage extends BasePage {
   template = require('./sadMoodPage.hbs');
    faceButtonEvent() {
-     alert("SAD FACE")
+     alert("I AM UNHAPPY")
      this.navigate('/');
   }
 
