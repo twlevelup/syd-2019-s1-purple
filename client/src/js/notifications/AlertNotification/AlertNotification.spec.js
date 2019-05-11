@@ -16,7 +16,6 @@ describe("AlertNotification", () => {
       const notification = new AlertNotification();
       notification.leftButtonEvent();
       expect(hideSpy).toHaveBeenCalled();
-      expect(console.log).toHaveBeenCalledWith("LEFT");
     });
   });
 
